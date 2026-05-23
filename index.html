@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <title>Finance Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+
+   </head>
+
+   <body>
+
+    <!--the top section-->
+    <h1 id="balance">  </h1>
+    <h2 id="income">  </h2>
+    <h2 id="expenses">  </h2>
+    
+    <!--the budget card-->
+    <div id="budget-card">
+        <h2 id="budget"></h2>
+        <button id="edit-budget-btn">Edit</button>
+        <div id="budget-modal">
+            <div class="modal-content">
+                <label for="budget-update">Enter your Budget: </label>
+                <input id="budget-input" type="number">
+                <button id="save-budget-btn">Save</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <!--the transaction section-->
+    <button id="addTransaction-btn">Add Transaction</button>
+    
+    <!--the modal section-->
+    <div id="modal" class="modal">
+
+        <!--the modal content section-->
+        <div class="modal-content">
+            <h2>Add Transaction</h2>
+
+            <label for="amount">Amount</label>
+            <input id="amount" type="number">
+
+            <label for="type">Type</label>
+            <select name="type" id="type" >
+                <option value="" disabled selected>Select type</option>
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+
+            <div id="category-container">
+              <label for="category">Category</label>
+              <select name="category" id="category">
+                  <option value="" disabled selected>Select category</option>
+                  <option value="bills">Bills</option>
+                  <option value="food">Food</option>
+                  <option value="transport">Transport</option>
+                  <option value="shopping">Shopping</option>
+              </select>
+            </div>
+
+            <label for="date">Date</label>
+            <input id="date" type="date">
+
+            <button id="add-btn">Add</button>
+            <button id="cancel-btn">Cancel</button>
+
+        </div>
+    </div>
+
+    <!--Displaying transactions section-->
+    <h2>Transactions</h2>
+    <div id="transactions-container"></div>
+
+    <script src="script.js"></script>
+
+
+   </body>
+</html>
